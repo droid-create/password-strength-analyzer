@@ -1,0 +1,161 @@
+/* General body & container */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 40px;
+}
+
+.container {
+  background-color: white;
+  padding: 25px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+  width: 400px;
+  max-width: 95vw;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* Title */
+h1 {
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+/* Form input */
+input[type="password"], input[type="text"] {
+  width: 100%;
+  padding: 10px 14px;
+  margin-top: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+input[type="password"]:focus, input[type="text"]:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Show password toggle */
+.show-password {
+  cursor: pointer;
+  font-size: 0.9rem;
+  user-select: none;
+  color: #007bff;
+  margin-bottom: 15px;
+  display: inline-block;
+}
+
+/* Strength bar container and bar */
+#strengthBarContainer {
+  height: 8px;
+  background: #ddd;
+  width: 100%;
+  border-radius: 5px;
+  margin-top: 5px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+#strengthBar {
+  height: 100%;
+  width: 0%;
+  background: red;
+  transition: width 0.3s ease, background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+/* Suggestions & feedback */
+#suggestions {
+  margin-top: 12px;
+  font-size: 0.9rem;
+  min-height: 3em;
+  color: #b22222;
+  white-space: pre-line;
+}
+
+#criteriaList {
+  margin-top: 12px;
+  font-size: 0.85rem;
+  text-align: left;
+  line-height: 1.4;
+}
+
+#criteriaList span {
+  display: block;
+}
+
+/* Strength and crack time text */
+#strength, #crackTime {
+  font-weight: 600;
+  margin-top: 15px;
+  text-align: center;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+body.dark-mode .container {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+  box-shadow: 0 4px 20px rgba(255 255 255 / 0.1);
+}
+
+body.dark-mode input[type="password"],
+body.dark-mode input[type="text"] {
+  background-color: #333;
+  color: #f0f0f0;
+  border: 1px solid #555;
+}
+
+body.dark-mode #suggestions {
+  color: #ff6b6b;
+}
+
+body.dark-mode #criteriaList span {
+  color: #bbb;
+}
+
+body.dark-mode #criteriaList span[style*="green"] {
+  color: #90ee90;
+}
+
+/* Theme toggle button */
+.theme-toggle {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 1.6rem;
+  cursor: pointer;
+  user-select: none;
+  color: #007bff;
+}
+
+/* Show password toggle in dark mode */
+body.dark-mode .show-password {
+  color: #66aaff;
+}
+
+/* Responsive for small devices */
+@media (max-width: 480px) {
+  .container {
+    width: 90vw;
+    padding: 20px;
+  }
+}
