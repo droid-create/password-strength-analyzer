@@ -23,14 +23,16 @@ passwords and known data breaches to provide actionable feedback to create stron
 
 ## Installation:
 
-### Clone the repository
+### Clone the repository  
 ```bash
 git clone https://github.com/droid-create/password-strength-analyzer.git
 cd password-strength-analyzer
 
 ## Create and activate virtual environment
-python -m venv pass # creates virtual environment named pass
-pass/Scripts/activate # activates virtual environment
+python -m venv pass    # creates virtual environment named 'pass'
+pass\Scripts\activate  # activates virtual environment on Windows
+# On Linux/Mac use:
+# source pass/bin/activate
 
 ## Install dependencies
 pip install -r requirements.txt  # installs Flask and requests
